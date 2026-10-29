@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services | Livio Residences</title>
+    <meta name="description" content="Discover Livio Residences services for rental homes, property listings, tenant coordination and property management.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Services page only */
+        .services-hero {
+            padding: 100px 6%;
+            color: white;
+            background:
+                linear-gradient(90deg, rgba(10,14,20,.94), rgba(10,14,20,.68)),
+                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
+                center 55% / cover no-repeat;
+        }
+
+        .services-hero-content {
+            max-width: 850px;
+        }
+
+        .services-hero h1 {
+            max-width: 780px;
+            margin: 18px 0;
+            font: 800 clamp(38px, 6vw, 68px)/1.08 'Bricolage Grotesque', sans-serif;
+        }
+
+        .services-hero .hero-description {
+            max-width: 620px;
+            color: #e2e2e2;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .services-hero .btn {
+            margin-top: 28px;
+        }
+
+        .services-intro {
+            padding: 70px 6% 35px;
+            text-align: center;
+        }
+
+        .services-intro h2,
+        .services-cta h2 {
+            font: 800 clamp(28px, 4vw, 42px)/1.15 'Bricolage Grotesque', sans-serif;
+        }
+
+        .services-intro > p:last-child {
+            max-width: 650px;
+            margin: 16px auto 0;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            padding: 25px 6% 75px;
+        }
+
+        .service-card {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 14px;
+            background: #fff;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px #0000000d;
+        }
+
+        .service-icon {
+            display: grid;
+            place-items: center;
+            width: 54px;
+            height: 54px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            background: #fff1e3;
+            color: var(--orange);
+            font-size: 22px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            font: 700 20px 'Bricolage Grotesque', sans-serif;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #b85c13;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .service-link:hover {
+            color: var(--black);
+        }
+
+        .services-cta {
+            margin: 0 6% 75px;
+            padding: 55px 25px;
+            border-radius: 14px;
+            background: #f7f7f7;
+            text-align: center;
+        }
+
+        .services-cta p {
+            max-width: 580px;
+            margin: 16px auto 25px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-hero {
+                padding: 70px 6%;
+            }
+
+            .services-hero .hero-description {
+                font-size: 16px;
+            }
+
+            .services-intro {
+                padding-top: 50px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding-bottom: 50px;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .services-cta {
+                margin-bottom: 50px;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-home"></i>
+            <span>Livio Residences</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <button class="dropdown-toggle" aria-expanded="false">
+                    Properties <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="buy.html">Buy</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="sell.html">Sell</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                </ul>
+            </li>
+            <li><a href="agents.html">Find an Agent</a></li>
+            <li><a href="advertise.html">Advertise</a></li>
+            <li><a href="services.html" aria-current="page">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="start-btn">Get Started</a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <main>
+        <section class="services-hero">
+            <div class="services-hero-content">
+                <p class="eyebrow">LIVIO SERVICES</p>
+                <h1>Property solutions built around you.</h1>
+                <p class="hero-description">
+                    Find a place to call home. List your property.
+                    Coordinate maintenance and manage your rental journey
+                    with greater confidence.
+                </p>
+                <a href="rent.html" class="btn btn-orange">
+                    Find a rental <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="services-intro">
+            <p class="eyebrow">WHAT WE DO</p>
+            <h2>Make every property step simpler.</h2>
+            <p>
+                Whether you're searching for a home or looking after
+                rental property, Livio brings the right people and
+                information together.
+            </p>
+        </section>
+
+        <section class="services-grid">
+            <article class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-house"></i></div>
+                <h3>Find a Rental Home</h3>
+                <p>Explore available homes, compare rental prices and contact property representatives to arrange viewings.</p>
+                <a href="rent.html" class="service-link">Explore rentals <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                <h3>Property Listings</h3>
+                <p>Submit property details, photographs and pricing for review before your listing is published.</p>
+                <a href="advertise.html" class="service-link">List a property <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                <h3>Property Management</h3>
+                <p>Keep property details, tenant records, lease information and rental activity organized.</p>
+                <a href="login.html" class="service-link">Access your account <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3>Maintenance Coordination</h3>
+                <p>Report property issues and coordinate communication between tenants, owners and repair technicians.</p>
+                <a href="contact.html" class="service-link">Contact us <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <h3>Viewing Requests</h3>
+                <p>Express interest in a property and coordinate a convenient time to view it before deciding.</p>
+                <a href="properties.html" class="service-link">Browse properties <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-key"></i></div>
+                <h3>Buying and Selling</h3>
+                <p>Explore property opportunities and connect with people involved in buying or selling real estate.</p>
+                <a href="buy.html" class="service-link">Explore properties <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+        </section>
+
+        <section class="services-cta">
+            <p class="eyebrow">YOUR NEXT STEP</p>
+            <h2>Let's make your property journey easier.</h2>
+            <p>Whether you're looking for a home or managing property, start with Livio.</p>
+            <a href="register.html" class="btn btn-orange">
+                Get started <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-home"></i><span>Livio Residences</span>
+                </a>
+                <p>Buy, rent, sell and manage property, all in one place.</p>
+                <div class="social">
+                    <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com/@yourpage" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@yourpage" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="mailto:info@yourdomain.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Properties</h4>
+                <ul>
+                    <li><a href="buy.html">Buy</a></li>
+                    <li><a href="rent.html">Rent</a></li>
+                    <li><a href="sell.html">Sell</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="agents.html">Find an Agent</a></li>
+                    <li><a href="advertise.html">Advertise</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Get Started</a></li>
+                    <li><a href="login.html">Property portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Livio Residences. All rights reserved.</p>
+    </footer>
+</body>
+</html>
